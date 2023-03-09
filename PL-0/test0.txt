@@ -1,0 +1,35 @@
+program SUMOFNUM;
+const H:=10,K:=1;
+var return,i,index;
+procedure sum(x);
+var sumx;
+procedure add(x,y);
+begin
+    return:=x+y
+end
+begin
+    sumx:=0;
+    if x<2 then
+        return:=x
+    else
+    begin
+        call sum(x-1);
+        call add(return,x)
+    end
+end
+begin
+    i:=K;
+    read(index);
+    write(index);
+    while i<=index do             
+    begin
+        if odd i then
+        begin
+            call sum(i);
+            write(return)
+        end
+        else
+            write(i);
+        i:=i+1
+    end
+end
